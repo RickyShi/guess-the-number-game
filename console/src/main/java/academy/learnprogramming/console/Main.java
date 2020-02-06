@@ -1,5 +1,9 @@
-package academy.learnprogramming;
+package academy.learnprogramming.console;
 
+import academy.learnprogramming.AppConfig;
+import academy.learnprogramming.Game;
+import academy.learnprogramming.MessageGenerator;
+import academy.learnprogramming.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -21,6 +25,11 @@ public class Main {
 
         //get game bean from context (container)
         Game game = context.getBean(Game.class);
+
+        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+        log.info("getMainMessages is {}", messageGenerator.getMainMessages());
+        log.info("getResultMessages is {}", messageGenerator.getResultMessages());
+
 
         // close context (container)
         context.close();
