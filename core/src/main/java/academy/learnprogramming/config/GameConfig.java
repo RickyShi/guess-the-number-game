@@ -1,5 +1,7 @@
 package academy.learnprogramming.config;
 
+import academy.learnprogramming.GuessCount;
+import academy.learnprogramming.MaxNumber;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,15 +11,20 @@ public class GameConfig {
     private int guessCount = 8;
 
     @Bean
+    @MaxNumber
     public int maxNumber() {
         return maxNumber;
     }
 
     @Bean
+    @GuessCount
     public int guessCount() {
         return guessCount;
     }
-    // == below will not work if we still use @autowired private int guessCount since the name is not qualified ==
+/*
+ now after adding custom annotation,
+ below code will work so that we do not need worry about future refactoring might cause some issue.
+ */
     /*@Bean
     public int guessCount1() {
         return guessCount;
