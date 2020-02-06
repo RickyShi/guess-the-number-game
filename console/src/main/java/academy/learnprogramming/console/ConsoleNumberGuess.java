@@ -2,8 +2,7 @@ package academy.learnprogramming.console;
 
 import academy.learnprogramming.Game;
 import academy.learnprogramming.MessageGenerator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
@@ -11,9 +10,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Slf4j
 @Component
 public class ConsoleNumberGuess {
-    private static final Logger log = LoggerFactory.getLogger((ConsoleNumberGuess.class));
 
     private final Game game;
     private final MessageGenerator messageGenerator;
