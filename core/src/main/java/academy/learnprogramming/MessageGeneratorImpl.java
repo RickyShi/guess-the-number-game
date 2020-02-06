@@ -3,20 +3,27 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
-public class MessageGeneratorImpl implements  MessageGenerator {
+@Component
+public class MessageGeneratorImpl implements MessageGenerator {
     private final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
+    private final Game game;
+
     @Autowired
-    private Game game;
+    public MessageGeneratorImpl(Game game) {
+        this.game = game;
+    }
 
     @PostConstruct
-    public void logGame(){
+    public void logGame() {
         log.info("game is {}", game);
         log.info("the remaining change is {}", game.getRemainingGuesses());
     }
+
     @Override
     public String getMainMessages() {
         return "Number is between " +
