@@ -4,3 +4,6 @@ Some sample code for new learners.
 
 UML: 
 ![Image description](./UML.jpg)
+
+After adding Web Module:
+![Image description](./UML-2.jpg)
