@@ -1,4 +1,5 @@
 /core/target/
+/web/target
 *.java.hsp
 *.sonarj
 *.sw*
