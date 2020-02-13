@@ -49,6 +49,6 @@ public class GameServiceImpl implements GameService {
     @PostConstruct
     public void init() {
         log.info("main message is: {}", messageGenerator.getMainMessages());
-        log.info("the remaining number is: {}", game.getNumber());
+        log.info("the number for guessing is: {}", game.getNumber());
     }
 }
