@@ -7,3 +7,7 @@ UML:
 
 After adding Web Module:
 ![Image description](./UML-2.jpg)
+
+
+Diagram for Request Interception in Spring
+![Image description](./request_interception.jpg)

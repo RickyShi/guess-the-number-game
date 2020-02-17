@@ -38,11 +38,11 @@ public class ConsoleNumberGuess {
             game.setGuess(guess);
             game.check();
 
-            if (game.isGameWon() || game.isGameLoss()){
+            if (game.isGameWon() || game.isGameLost()) {
                 System.out.println(messageGenerator.getResultMessages());
                 System.out.println("Play again y/n?/n");
                 String playAgainString = scanner.nextLine().trim();
-                if(!playAgainString.equalsIgnoreCase("y")){
+                if (!playAgainString.equalsIgnoreCase("y")) {
                     break;
                 }
 
