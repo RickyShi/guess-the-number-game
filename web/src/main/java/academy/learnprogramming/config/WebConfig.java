@@ -29,12 +29,11 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new RequestInterceptor());
 
-
-        LocaleChangeInterceptor localeChangeInterceptor =
+        /*LocaleChangeInterceptor localeChangeInterceptor =
                 new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
-        registry.addInterceptor(localeChangeInterceptor);
-//        registry.addInterceptor(new LocaleChangeInterceptor());
+        registry.addInterceptor(localeChangeInterceptor);*/
+        registry.addInterceptor(new LocaleChangeInterceptor());
 
     }
 }
