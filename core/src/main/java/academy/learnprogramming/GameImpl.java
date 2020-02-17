@@ -74,7 +74,7 @@ public class GameImpl implements Game {
     }
 
     @Override
-    public boolean isGameLoss() {
+    public boolean isGameLost() {
         return !isGameWon() && remainingGuesses <= 0;
     }
 

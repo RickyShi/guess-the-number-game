@@ -24,5 +24,5 @@ public interface Game {
 
     boolean isGameWon();
 
-    boolean isGameLoss();
+    boolean isGameLost();
 }

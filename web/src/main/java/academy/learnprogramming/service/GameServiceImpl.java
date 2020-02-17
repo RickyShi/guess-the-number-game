@@ -22,7 +22,7 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public boolean isGameOver() {
-        return game.isGameWon() || game.isGameLoss();
+        return game.isGameWon() || game.isGameLost();
     }
 
     @Override
