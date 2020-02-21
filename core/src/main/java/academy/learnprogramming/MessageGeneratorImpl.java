@@ -1,6 +1,7 @@
 package academy.learnprogramming;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
@@ -26,7 +27,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
     private final MessageSource messageSource;
     // == constructor ==
 
-
+    @Autowired
     public MessageGeneratorImpl(Game game, MessageSource messageSource) {
         this.game = game;
         this.messageSource = messageSource;
